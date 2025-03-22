@@ -1,0 +1,12 @@
+.cleaner-icon {
+  position: absolute;
+  right: 36px;
+  top: 16px;
+  width: 18px;
+  opacity: 0.7;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}

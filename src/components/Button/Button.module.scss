@@ -1,0 +1,28 @@
+.button {
+  position: relative;
+  height: 50px;
+  flex-grow: 1;
+  background-color: #4b6bfb;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: 700;
+  max-width: 390px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #4b4bfb;
+  }
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    max-width: unset;
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 14px;
+  left: calc(50% - 10px);
+}

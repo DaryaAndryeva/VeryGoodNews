@@ -1,0 +1,73 @@
+.date-range-picker {
+  display: flex;
+  position: relative;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 260px;
+  max-width: 260px;
+}
+
+.value-container {
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  gap: 10px;
+  top: 16px;
+  left: 20px;
+}
+
+.date-input-start,
+.date-input-end {
+  z-index: 998;
+  height: 40px;
+  opacity: 0;
+  width: calc(260px / 2 - 10px);
+  max-width: calc(260px / 2 - 10px);
+}
+
+.date-input-start {
+  top: -26px;
+  left: 0px;
+}
+
+.date-input-end {
+  top: -26px;
+  right: -220px;
+}
+
+.start-value,
+.end-value {
+  font-size: 16px;
+  z-index: 10;
+}
+
+.start-value {
+  top: 15px;
+  right: 10px;
+}
+
+.end-value {
+  top: 15px;
+  left: 10px;
+}
+
+.separator {
+  font-size: 16px;
+  color: #555;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
