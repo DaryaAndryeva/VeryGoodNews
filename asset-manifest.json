@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/VeryGoodNews/static/css/main.df5dd96f.css",
+    "main.js": "/VeryGoodNews/static/js/main.8f2956b5.js",
+    "static/media/logo.svg": "/VeryGoodNews/static/media/logo.f569e981f2f4be6cf826f9a012e37837.svg",
+    "index.html": "/VeryGoodNews/index.html",
+    "static/media/next-arrow.svg": "/VeryGoodNews/static/media/next-arrow.6508d1ce4c2b89e662c83f978acca7c1.svg",
+    "static/media/cleaner.svg": "/VeryGoodNews/static/media/cleaner.5d3547d8344d006a4a74a4a9503f62f8.svg",
+    "main.df5dd96f.css.map": "/VeryGoodNews/static/css/main.df5dd96f.css.map",
+    "main.8f2956b5.js.map": "/VeryGoodNews/static/js/main.8f2956b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df5dd96f.css",
+    "static/js/main.8f2956b5.js"
+  ]
+}
