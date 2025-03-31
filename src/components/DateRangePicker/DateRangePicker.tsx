@@ -11,10 +11,9 @@ interface DateRangePickerProps {
 
 export const DateRangePicker = ({ setPeriod }: DateRangePickerProps) => {
   const today = new Date();
-  const sevenDaysAgo = new Date(today);
-  sevenDaysAgo.setDate(today.getDate() - 7);
+  const minDate = new Date("Mon Mar 31 2025 13:58:07 GMT+0300");
 
-  const [startDate, setStartDate] = useState<Date>(sevenDaysAgo);
+  const [startDate, setStartDate] = useState<Date>(minDate);
   const [endDate, setEndDate] = useState<Date>(today);
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -50,7 +49,7 @@ export const DateRangePicker = ({ setPeriod }: DateRangePickerProps) => {
         placeholderText="Начало"
         className={styles["date-input-start"]}
         dateFormat="dd.MM.yyyy"
-        minDate={sevenDaysAgo}
+        minDate={minDate}
         maxDate={endDate}
       />
       <DatePicker
