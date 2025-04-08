@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/VeryGoodNews/static/css/main.33f09de4.css",
-    "main.js": "/VeryGoodNews/static/js/main.73b1149c.js",
+    "main.css": "/VeryGoodNews/static/css/main.86b58650.css",
+    "main.js": "/VeryGoodNews/static/js/main.e5b65e76.js",
     "static/media/logo.svg": "/VeryGoodNews/static/media/logo.f569e981f2f4be6cf826f9a012e37837.svg",
     "index.html": "/VeryGoodNews/index.html",
     "static/media/next-arrow.svg": "/VeryGoodNews/static/media/next-arrow.6508d1ce4c2b89e662c83f978acca7c1.svg",
     "static/media/cleaner.svg": "/VeryGoodNews/static/media/cleaner.5d3547d8344d006a4a74a4a9503f62f8.svg",
-    "main.33f09de4.css.map": "/VeryGoodNews/static/css/main.33f09de4.css.map",
-    "main.73b1149c.js.map": "/VeryGoodNews/static/js/main.73b1149c.js.map"
+    "main.86b58650.css.map": "/VeryGoodNews/static/css/main.86b58650.css.map",
+    "main.e5b65e76.js.map": "/VeryGoodNews/static/js/main.e5b65e76.js.map"
   },
   "entrypoints": [
-    "static/css/main.33f09de4.css",
-    "static/js/main.73b1149c.js"
+    "static/css/main.86b58650.css",
+    "static/js/main.e5b65e76.js"
   ]
 }
