@@ -12,9 +12,10 @@ export const getSourses = async () => {
     }
 
     const data = await response.json();
+
     return {
       status: response.status,
-      data: data,
+      data: data.results,
     };
   } catch (e) {
     console.log(e);

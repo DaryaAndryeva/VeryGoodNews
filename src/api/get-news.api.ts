@@ -2,12 +2,14 @@ import axios from "axios";
 import { News } from "../pages/Main/Main";
 
 export const getNews = async (
-  source?: number,
+  source?: string,
   keyword?: string,
-  period?: { start_dt: string; end_dt: string }
-): Promise<{ status: number; data: News[] } | null> => {
+  period?: { start_dt: string; end_dt: string },
+  limit?: number,
+  offset?: number
+): Promise<{ status: number; data: News[]; total: number } | null> => {
   try {
-    const response = await axios.get<News[]>(
+    const response = await axios.get<{ results: News[]; count: number }>(
       `https://verygoodnews.online/api/news`,
       {
         params: {
@@ -15,6 +17,8 @@ export const getNews = async (
           source,
           start_date: period?.start_dt,
           end_date: period?.end_dt,
+          limit,
+          offset,
         },
         headers: { "Content-Type": "application/json" },
       }
@@ -22,7 +26,8 @@ export const getNews = async (
 
     return {
       status: response.status,
-      data: response.data || [],
+      data: response.data.results || [],
+      total: response.data.count,
     };
   } catch (e) {
     console.error("Ошибка при получении новостей:", e);

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { News } from "../../pages/Main/Main";
 import { Card } from "../Card";
 import arrow from "../../assets/images/next-arrow.svg";
@@ -9,26 +8,30 @@ const OFFSET = 10;
 
 interface ListProps {
   news: News[];
+  itemOffset: number;
+  setItemOffset: (offset: number) => void;
+  totalCount: number;
 }
 
-export const List = ({ news }: ListProps): JSX.Element => {
-  const [itemOffset, setItemOffset] = useState<number>(0);
-  const endOffset = itemOffset + OFFSET;
-  const currentItems = news.slice(itemOffset, endOffset);
-
+export const List = ({
+  news,
+  itemOffset,
+  setItemOffset,
+  totalCount,
+}: ListProps): JSX.Element => {
   const handlePageClick = (event: any) => {
-    const newOffset = (event.selected * OFFSET) % (news?.length || 0);
+    const newOffset = event.selected * OFFSET;
     setItemOffset(newOffset);
   };
 
   return (
     <div className={styles["wrapper"]}>
       <div className={styles["list"]}>
-        {currentItems?.map((news, index) => (
-          <Card news={news} key={index} />
+        {news?.map((item, index) => (
+          <Card news={item} key={index} />
         ))}
       </div>
-      {news.length > OFFSET && (
+      {totalCount > 10 && (
         <ReactPaginate
           containerClassName={styles["pagination"]}
           pageClassName={styles["page-item"]}
@@ -36,10 +39,10 @@ export const List = ({ news }: ListProps): JSX.Element => {
           breakLabel="..."
           onPageChange={handlePageClick}
           pageRangeDisplayed={5}
-          pageCount={Math.ceil(news?.length / OFFSET)}
+          pageCount={Math.ceil(totalCount / OFFSET)}
           nextLabel={
             <div className={styles["arrow-next"]}>
-              {itemOffset < news.length - OFFSET && (
+              {itemOffset < totalCount - OFFSET && (
                 <img src={arrow} alt="img" />
               )}
             </div>
